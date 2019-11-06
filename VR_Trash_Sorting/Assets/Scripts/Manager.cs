@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class Manager : MonoBehaviour
 {
-    #region Singleton
+    #region Singleton Pattern
     public static Manager Instance { get; private set; }
 
     private void Awake()
@@ -17,6 +17,11 @@ public class Manager : MonoBehaviour
 
         Instance = this;
     }
+    #endregion
+    
+    #region Delegate Pattern
+    public delegate void UpdateScore(int point);
+    public UpdateScore updateScore;
     #endregion
 
     [SerializeField] private Transform player;
@@ -33,6 +38,11 @@ public class Manager : MonoBehaviour
     {
         _trashObjects.AddRange(Resources.FindObjectsOfTypeAll<TrashObject>());
         gameOverUI.enabled = false;
+
+        //Assigning listeners
+        updateScore += SetPoints;
+        updateScore += WinCheck;
+        updateScore += UpdateUI;
     }
 
     #region UI Calls
@@ -55,18 +65,22 @@ public class Manager : MonoBehaviour
         File.AppendAllText(filePath, content);
     }
     #endregion
-    
-    //Called from trash can 
-    public void DeductPoints(int pointsToDeduct) => _score -= pointsToDeduct;
 
-    //Called from trash can 
-    public void AddPoints(int pointsToAdd)
+    //Sets the current score 
+    private void SetPoints(int points) => _score += points;
+
+    //Check if the player is done with the game
+    private void WinCheck(int input)
     {
-        _score += pointsToAdd;
-
         if (!CheckForCompletion()) return;
         Time.timeScale = 0;
         gameOverUI.enabled = true;
+    }
+
+    //Update the score seen in the UI 
+    private void UpdateUI(int input)
+    {
+        //TODO: Update the UI 
     }
 
     //Disables a trash object after it hits the right trash can

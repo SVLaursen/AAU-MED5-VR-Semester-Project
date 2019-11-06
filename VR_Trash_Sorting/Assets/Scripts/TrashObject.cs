@@ -28,13 +28,13 @@ public class TrashObject : MonoBehaviour
         var destination = new Vector3(player.x, player.y + directionYOffset, player.z);
         var direction = Vector3.Normalize(destination - transform.position);
         
-        Manager.Instance.DeductPoints(pointsTaken);
+        Manager.Instance.updateScore(-pointsTaken);
         _rigidbody.AddForce(direction * forceToApply);
     }
 
     public void AcceptObject()
     {
-        Manager.Instance.AddPoints(pointsGiven);
+        Manager.Instance.updateScore(pointsGiven);
         Manager.Instance.DisableTrashObject(this);
     }
 }
