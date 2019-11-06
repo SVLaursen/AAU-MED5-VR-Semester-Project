@@ -2,8 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Oculus;
 
-[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Rigidbody), typeof(OVRGrabbable))]
 public class TrashObject : MonoBehaviour
 {
     [SerializeField] private TrashType trashType;
