@@ -24,20 +24,16 @@ public class Manager : MonoBehaviour
     public UpdateScore updateScore;
     #endregion
 
-    [SerializeField] private Transform player;
     [SerializeField] private Canvas gameOverUI;
     
     private int _userId;
     private int _score;
     
-    private List<TrashObject> _trashObjects;
-
-    public Transform Player => player;
+    public List<TrashObject> TrashObjects;
 
     private void Start()
     {
-        _trashObjects.AddRange(Resources.FindObjectsOfTypeAll<TrashObject>());
-        gameOverUI.enabled = false;
+        //gameOverUI.enabled = false;
 
         //Assigning listeners
         updateScore += SetPoints;
@@ -67,11 +63,16 @@ public class Manager : MonoBehaviour
     #endregion
 
     //Sets the current score 
-    private void SetPoints(int points) => _score += points;
+    private void SetPoints(int points)
+    {
+        Debug.Log("Set the score");
+        _score += points;
+    }
 
     //Check if the player is done with the game
     private void WinCheck(int input)
     {
+        Debug.Log("Did win check");
         if (!CheckForCompletion()) return;
         Time.timeScale = 0;
         gameOverUI.enabled = true;
@@ -81,14 +82,15 @@ public class Manager : MonoBehaviour
     private void UpdateUI(int input)
     {
         //TODO: Update the UI 
+        Debug.Log("Updated the UI");
     }
 
     //Disables a trash object after it hits the right trash can
     public void DisableTrashObject(TrashObject trashObject)
     {
-        foreach (var trash in _trashObjects.Where(trash => trash == trashObject))
+        foreach (var trash in TrashObjects.Where(trash => trash == trashObject))
             trash.gameObject.SetActive(false);
     }
 
-    private bool CheckForCompletion() => !_trashObjects.Any(trash => trash.gameObject.activeSelf);
+    private bool CheckForCompletion() => !TrashObjects.Any(trash => trash.gameObject.activeSelf);
 }

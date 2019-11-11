@@ -10,32 +10,33 @@ public class TrashObject : MonoBehaviour
     [SerializeField] private TrashType trashType;
     [SerializeField] private int pointsGiven;
     [SerializeField] private int pointsTaken;
-    [SerializeField] private float forceToApply;
-    [SerializeField] private float directionYOffset;
-
-    private Rigidbody _rigidbody;
+    
+    private Vector3 _originalPosition;
 
     public TrashType TrashType => trashType;
 
     private void Awake()
     {
-        _rigidbody = GetComponent<Rigidbody>();
+        _originalPosition = transform.position;
+        Manager.Instance.TrashObjects.Add(this);
     }
 
     public void RejectObject()
     {
-        var player = Manager.Instance.Player.position;
-        var destination = new Vector3(player.x, player.y + directionYOffset, player.z);
-        var direction = Vector3.Normalize(destination - transform.position);
-        
         Manager.Instance.updateScore(-pointsTaken);
-        _rigidbody.AddForce(direction * forceToApply);
+        Manager.Instance.DisableTrashObject(this);
     }
 
     public void AcceptObject()
     {
         Manager.Instance.updateScore(pointsGiven);
         Manager.Instance.DisableTrashObject(this);
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+            transform.position = _originalPosition;
     }
 }
 
