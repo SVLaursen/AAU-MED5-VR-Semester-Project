@@ -15,7 +15,7 @@ public class TrashObject : MonoBehaviour
 
     public TrashType TrashType => trashType;
 
-    private void Awake()
+    private void Start()
     {
         _originalPosition = transform.position;
         Manager.Instance.TrashObjects.Add(this);

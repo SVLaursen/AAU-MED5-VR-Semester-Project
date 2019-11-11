@@ -4,9 +4,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Manager : MonoBehaviour
 {
+    [HideInInspector] public List<TrashObject> TrashObjects;
+    
     #region Singleton Pattern
     public static Manager Instance { get; private set; }
 
@@ -16,6 +19,7 @@ public class Manager : MonoBehaviour
             Destroy(gameObject);
 
         Instance = this;
+        TrashObjects = new List<TrashObject>();
     }
     #endregion
     
@@ -25,15 +29,16 @@ public class Manager : MonoBehaviour
     #endregion
 
     [SerializeField] private Canvas gameOverUI;
+    [SerializeField] private InputField inputField;
     
     private int _userId;
     private int _score;
     
-    public List<TrashObject> TrashObjects;
+    
 
     private void Start()
     {
-        //gameOverUI.enabled = false;
+        gameOverUI.enabled = false;
 
         //Assigning listeners
         updateScore += SetPoints;
@@ -43,9 +48,10 @@ public class Manager : MonoBehaviour
 
     #region UI Calls
     //Set using UI input
-    public void SetUsername(int id)
+    public void SetUsername(string arg0)
     {
-        _userId = id;
+        Debug.Log("User ID set");
+        _userId = int.Parse(arg0);
     }
     
     //Called from UI button press
