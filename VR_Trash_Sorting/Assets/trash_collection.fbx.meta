@@ -1,0 +1,210 @@
+fileFormatVersion: 2
+guid: 0ca472468d438104f8c73b8ab0cd4c93
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: apple.001
+    100002: broken_glass
+    100004: cardboard_box
+    100006: chicken_drum
+    100008: coffee_cup
+    100010: ground_beef_package
+    100012: jar_lid
+    100014: newspaper_folded
+    100016: Paper
+    100018: pickle_jar
+    100020: pizza
+    100022: pizza_box
+    100024: plastic_bottle
+    100026: plastic_cup
+    100028: potato_chips
+    100030: soda_can
+    100032: tin_can
+    100034: toilet_paper_roll
+    100036: //RootNode
+    100038: wine_bottle
+    400000: apple.001
+    400002: broken_glass
+    400004: cardboard_box
+    400006: chicken_drum
+    400008: coffee_cup
+    400010: ground_beef_package
+    400012: jar_lid
+    400014: newspaper_folded
+    400016: Paper
+    400018: pickle_jar
+    400020: pizza
+    400022: pizza_box
+    400024: plastic_bottle
+    400026: plastic_cup
+    400028: potato_chips
+    400030: soda_can
+    400032: tin_can
+    400034: toilet_paper_roll
+    400036: //RootNode
+    400038: wine_bottle
+    2100000: plastic_bottle
+    2100002: plastic_bottle_cap
+    2100004: ground_beef_package
+    2100006: Material
+    2100008: wine_glass_material
+    2100010: wine_label.001
+    2100012: wine_label.002
+    2100014: jar
+    2100016: Material.001
+    2100018: Material.002
+    2100020: Paper
+    2100022: cardboard_box
+    2100024: metal_lid
+    2100026: plastic_cup.001
+    2100028: plastic_cup.002
+    2100030: Material.003
+    2100032: Material.004
+    2100034: Material.005
+    2100036: tin_can
+    2100038: coffee_cup
+    2100040: Material.006
+    2100042: apple
+    2300000: apple.001
+    2300002: broken_glass
+    2300004: cardboard_box
+    2300006: chicken_drum
+    2300008: coffee_cup
+    2300010: ground_beef_package
+    2300012: jar_lid
+    2300014: newspaper_folded
+    2300016: Paper
+    2300018: pickle_jar
+    2300020: pizza
+    2300022: pizza_box
+    2300024: plastic_bottle
+    2300026: plastic_cup
+    2300028: potato_chips
+    2300030: soda_can
+    2300032: tin_can
+    2300034: toilet_paper_roll
+    2300036: wine_bottle
+    3300000: apple.001
+    3300002: broken_glass
+    3300004: cardboard_box
+    3300006: chicken_drum
+    3300008: coffee_cup
+    3300010: ground_beef_package
+    3300012: jar_lid
+    3300014: newspaper_folded
+    3300016: Paper
+    3300018: pickle_jar
+    3300020: pizza
+    3300022: pizza_box
+    3300024: plastic_bottle
+    3300026: plastic_cup
+    3300028: potato_chips
+    3300030: soda_can
+    3300032: tin_can
+    3300034: toilet_paper_roll
+    3300036: wine_bottle
+    4300000: plastic_bottle
+    4300002: ground_beef_package
+    4300004: potato_chips
+    4300006: wine_bottle
+    4300008: pickle_jar
+    4300010: pizza_box
+    4300012: pizza
+    4300014: Paper
+    4300016: cardboard_box
+    4300018: jar_lid
+    4300020: plastic_cup
+    4300022: toilet_paper_roll
+    4300024: soda_can
+    4300026: newspaper_folded
+    4300028: tin_can
+    4300030: broken_glass
+    4300032: coffee_cup
+    4300034: chicken_drum
+    4300036: apple.001
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
