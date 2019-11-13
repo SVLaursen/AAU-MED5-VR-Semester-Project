@@ -10,7 +10,8 @@ public class TrashObject : MonoBehaviour
     [SerializeField] private TrashType trashType;
     [SerializeField] private int pointsGiven;
     [SerializeField] private int pointsTaken;
-    
+
+    private Rigidbody _rigidbody;
     private Vector3 _originalPosition;
 
     public TrashType TrashType => trashType;
@@ -18,13 +19,18 @@ public class TrashObject : MonoBehaviour
     private void Start()
     {
         _originalPosition = transform.position;
+        _rigidbody = GetComponent<Rigidbody>();
+        
         Manager.Instance.TrashObjects.Add(this);
     }
 
     public void RejectObject()
     {
         Manager.Instance.updateScore(-pointsTaken);
-        Manager.Instance.DisableTrashObject(this);
+        Manager.Instance.CountTrashError(trashType);
+        
+        transform.position = _originalPosition;
+        _rigidbody.velocity = Vector3.zero;
     }
 
     public void AcceptObject()

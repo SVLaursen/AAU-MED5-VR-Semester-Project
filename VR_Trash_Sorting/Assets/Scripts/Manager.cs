@@ -20,6 +20,7 @@ public class Manager : MonoBehaviour
 
         Instance = this;
         TrashObjects = new List<TrashObject>();
+        Time.timeScale = 1;
     }
     #endregion
     
@@ -34,7 +35,7 @@ public class Manager : MonoBehaviour
     private int _userId;
     private int _score;
     
-    
+    private Dictionary<TrashType, int> failData = new Dictionary<TrashType, int>();
 
     private void Start()
     {
@@ -62,12 +63,18 @@ public class Manager : MonoBehaviour
         if (!File.Exists(filePath))
             File.WriteAllText(filePath, "User:" + _userId + "\n");
 
-        var content = "Score: " + _score;
+        var content = "Score: " + _score + "\n";
         
         File.AppendAllText(filePath, content);
+        
+        foreach (var data in failData.Select(entry => entry.Key.ToString() + ": " + entry.Value + "\n"))
+            File.AppendAllText(filePath, data);
     }
     #endregion
-
+    
+    //Collects info on what objects has been
+    public void CountTrashError(TrashType key) => failData[key] += 1;
+    
     //Sets the current score 
     private void SetPoints(int points)
     {
