@@ -35,8 +35,8 @@ public class TrashObject : MonoBehaviour
 
     public void AcceptObject()
     {
-        Manager.Instance.updateScore(pointsGiven);
         Manager.Instance.DisableTrashObject(this);
+        Manager.Instance.updateScore(pointsGiven);
     }
 
     private void OnCollisionEnter(Collision other)

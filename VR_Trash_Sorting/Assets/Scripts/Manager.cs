@@ -119,5 +119,14 @@ public class Manager : MonoBehaviour
             trash.gameObject.SetActive(false);
     }
 
-    private bool CheckForCompletion() => !TrashObjects.Any(trash => trash.gameObject.activeSelf);
+    private bool CheckForCompletion()
+    {
+        foreach (var item in TrashObjects)
+        {
+            Debug.Log(item.gameObject.activeSelf);
+            if (item.gameObject.activeSelf == true) return false;
+        }
+        
+        return true;
+    }
 }
