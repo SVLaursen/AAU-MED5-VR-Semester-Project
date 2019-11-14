@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Manager : MonoBehaviour
@@ -47,6 +48,12 @@ public class Manager : MonoBehaviour
         updateScore += UpdateUI;
     }
 
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.L))
+            SceneManager.LoadScene(0);
+    }
+
     #region UI Calls
     //Set using UI input
     public void SetUsername(string arg0)
@@ -71,7 +78,7 @@ public class Manager : MonoBehaviour
             File.AppendAllText(filePath, data);
     }
     #endregion
-    
+
     //Collects info on what objects has been
     public void CountTrashError(TrashType key) => failData[key] += 1;
     
