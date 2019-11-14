@@ -11,7 +11,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/PamphletScene.unity
     guid: 3397b5879ea89cc459f2de86470e2824
-  - enabled: 1
-    path: Assets/Scene/InteractiveScene.unity
-    guid: 51518eba0f0268d47a58283b5146f681
   m_configObjects: {}

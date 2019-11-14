@@ -31,12 +31,11 @@ public class Manager : MonoBehaviour
     #endregion
 
     [SerializeField] private Canvas gameOverUI;
-    [SerializeField] private InputField inputField;
     
     private int _userId;
     private int _score;
     
-    private Dictionary<TrashType, int> failData = new Dictionary<TrashType, int>();
+    private Dictionary<TrashType, int> _failData = new Dictionary<TrashType, int>();
 
     private void Start()
     {
@@ -74,13 +73,13 @@ public class Manager : MonoBehaviour
         
         File.AppendAllText(filePath, content);
         
-        foreach (var data in failData.Select(entry => entry.Key.ToString() + ": " + entry.Value + "\n"))
+        foreach (var data in _failData.Select(entry => entry.Key.ToString() + ": " + entry.Value + "\n"))
             File.AppendAllText(filePath, data);
     }
     #endregion
 
     //Collects info on what objects has been
-    public void CountTrashError(TrashType key) => failData[key] += 1;
+    public void CountTrashError(TrashType key) => _failData[key] += 1;
     
     //Sets the current score 
     private void SetPoints(int points)
