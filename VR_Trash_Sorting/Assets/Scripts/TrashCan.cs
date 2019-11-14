@@ -7,10 +7,12 @@ public class TrashCan : MonoBehaviour
 {
     [SerializeField] private TrashType trashToAccept;
     [SerializeField] private GameObject rejectIcon;
+    [SerializeField] private GameObject acceptIcon;
 
     private void Start()
     {
         rejectIcon?.SetActive(false);
+        acceptIcon?.SetActive(false);
     }
     
     private void OnCollisionEnter(Collision other)
@@ -19,7 +21,10 @@ public class TrashCan : MonoBehaviour
         Debug.Log(other.gameObject.GetComponent<TrashObject>().TrashType);
 
         if (trashObject.TrashType == trashToAccept)
+        {
             trashObject.AcceptObject(); //Accept the trash
+            StartCoroutine(ShowAcceptThenDissappear());
+        }
         else
         {
             //Spew it back in their face, this is not correct
@@ -33,5 +38,12 @@ public class TrashCan : MonoBehaviour
         rejectIcon?.SetActive(true);
         yield return new WaitForSeconds(1.5f);
         rejectIcon?.SetActive(false);
+    }
+
+    private IEnumerator ShowAcceptThenDissappear()
+    {
+        acceptIcon?.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        acceptIcon?.SetActive(false);
     }
 }
