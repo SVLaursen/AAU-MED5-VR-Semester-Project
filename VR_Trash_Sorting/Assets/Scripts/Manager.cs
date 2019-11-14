@@ -35,7 +35,15 @@ public class Manager : MonoBehaviour
     private int _userId;
     private int _score;
     
-    private Dictionary<TrashType, int> _failData = new Dictionary<TrashType, int>();
+    private Dictionary<TrashType, int> _failData = new Dictionary<TrashType, int>()
+    {
+        {TrashType.Glass, 0},
+        {TrashType.Metal, 0},
+        {TrashType.Paper, 0},
+        {TrashType.Plastic, 0},
+        {TrashType.BioWaste, 0},
+        {TrashType.ResidualWaste, 0}
+    };
 
     private void Start()
     {

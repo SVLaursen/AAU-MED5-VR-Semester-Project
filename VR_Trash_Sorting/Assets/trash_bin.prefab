@@ -300,6 +300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashToAccept: 0
+  rejectIcon: {fileID: 0}
 --- !u!1 &7692370024154143660
 GameObject:
   m_ObjectHideFlags: 0

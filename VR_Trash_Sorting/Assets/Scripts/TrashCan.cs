@@ -16,6 +16,7 @@ public class TrashCan : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         var trashObject = other.gameObject.GetComponent<TrashObject>();
+        Debug.Log(other.gameObject.GetComponent<TrashObject>().TrashType);
 
         if (trashObject.TrashType == trashToAccept)
             trashObject.AcceptObject(); //Accept the trash
