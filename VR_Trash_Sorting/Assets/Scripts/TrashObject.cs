@@ -8,20 +8,24 @@ using Oculus;
 public class TrashObject : MonoBehaviour
 {
     [SerializeField] private TrashType trashType;
-    [SerializeField] private GameObject popUp;
     [SerializeField] private int pointsGiven;
     [SerializeField] private int pointsTaken;
 
     private Rigidbody _rigidbody;
+    private List<GameObject> _popUps = new List<GameObject>();
     private Vector3 _originalPosition;
+    private bool _displaced;
 
     public TrashType TrashType => trashType;
 
-    private void Start()
+    private void Start()                  
     {
         _originalPosition = transform.position;
         _rigidbody = GetComponent<Rigidbody>();
-        popUp.SetActive(false);
+        DeactivatePopUp();
+
+        foreach (Transform child in transform)
+            _popUps.Add(child.gameObject);
         
         Manager.Instance.TrashObjects.Add(this);
     }
@@ -45,14 +49,54 @@ public class TrashObject : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ground"))
             transform.position = _originalPosition;
-        else if (other.gameObject.CompareTag("Hands"))
-            popUp.SetActive(true);
     }
 
-    private void OnCollisionExit(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Hands"))
-            popUp.SetActive(false);
+        ActivatePopUp();
+        _displaced = false;
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        ActivatePopUp();
+        _displaced = false;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        DeactivatePopUp();
+        _displaced = true;
+        StartCoroutine(WaitThenReturn());
+    }
+
+    private void ActivatePopUp()
+    {
+        foreach(var pop in _popUps)
+            pop.SetActive(true);
+    }
+
+    private void DeactivatePopUp()
+    {
+        foreach(var pop in _popUps)
+            pop.SetActive(false);
+    }
+
+    private IEnumerator WaitThenReturn()
+    {
+        var distanceFromOrigin = Vector3.Distance(transform.position, _originalPosition);
+
+        if (distanceFromOrigin < 3f)
+        {
+            yield return new WaitForSeconds(6f);
+
+            if (!_displaced)
+                yield return null;
+            
+            transform.position = _originalPosition;
+            _rigidbody.velocity = Vector3.zero;
+        }
+        else yield return null;
     }
 }
 
