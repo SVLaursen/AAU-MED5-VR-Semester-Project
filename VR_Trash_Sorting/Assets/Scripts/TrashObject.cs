@@ -8,6 +8,7 @@ using Oculus;
 public class TrashObject : MonoBehaviour
 {
     [SerializeField] private TrashType trashType;
+    [SerializeField] private GameObject popUp;
     [SerializeField] private int pointsGiven;
     [SerializeField] private int pointsTaken;
 
@@ -20,6 +21,7 @@ public class TrashObject : MonoBehaviour
     {
         _originalPosition = transform.position;
         _rigidbody = GetComponent<Rigidbody>();
+        popUp.SetActive(false);
         
         Manager.Instance.TrashObjects.Add(this);
     }
@@ -43,6 +45,14 @@ public class TrashObject : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ground"))
             transform.position = _originalPosition;
+        else if (other.gameObject.CompareTag("Hands"))
+            popUp.SetActive(true);
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.CompareTag("Hands"))
+            popUp.SetActive(false);
     }
 }
 
