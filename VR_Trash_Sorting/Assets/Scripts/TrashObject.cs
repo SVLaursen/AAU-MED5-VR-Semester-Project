@@ -11,12 +11,21 @@ public class TrashObject : MonoBehaviour
     [SerializeField] private int pointsGiven;
     [SerializeField] private int pointsTaken;
 
+    [SerializeField] private AudioClip collisionSound;
+
+    private AudioSource audioSource;
+    
     private Rigidbody _rigidbody;
     private List<GameObject> _popUps = new List<GameObject>();
     private Vector3 _originalPosition;
     private bool _displaced;
 
     public TrashType TrashType => trashType;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void Start()                  
     {
@@ -47,6 +56,8 @@ public class TrashObject : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        audioSource.PlayOneShot(collisionSound);
+
         if (other.gameObject.CompareTag("Ground"))
             transform.position = _originalPosition;
     }
