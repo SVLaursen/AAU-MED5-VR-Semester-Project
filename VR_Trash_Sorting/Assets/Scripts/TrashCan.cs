@@ -20,8 +20,8 @@ public class TrashCan : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         
-        correctSort = Resources.Load<AudioClip>("SFX/Correct");
-        wrongSort = Resources.Load<AudioClip>("SFX/Wrong");
+        correctSort = Resources.Load<AudioClip>("Assets/SFX/Correct");
+        wrongSort = Resources.Load<AudioClip>("Assets/SFX/Wrong");
     }
 
     private void Start()
