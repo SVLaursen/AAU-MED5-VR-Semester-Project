@@ -9,8 +9,8 @@ public class TrashCan : MonoBehaviour
     [SerializeField] private GameObject rejectIcon;
     [SerializeField] private GameObject acceptIcon;
 
-    private AudioClip correctSort;
-    private AudioClip wrongSort;
+    [SerializeField] private AudioClip correctSort;
+    [SerializeField] private AudioClip wrongSort;
 
     private AudioSource audioSource;
 
@@ -19,9 +19,6 @@ public class TrashCan : MonoBehaviour
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
-        
-        correctSort = Resources.Load<AudioClip>("Assets/SFX/Correct");
-        wrongSort = Resources.Load<AudioClip>("Assets/SFX/Wrong");
     }
 
     private void Start()
