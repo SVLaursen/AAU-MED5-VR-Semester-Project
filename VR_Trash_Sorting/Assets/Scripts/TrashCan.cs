@@ -14,12 +14,14 @@ public class TrashCan : MonoBehaviour
 
     private AudioSource audioSource;
 
-    correctSort = Resources.Load("SFX/Correct",AudioClip);
-    wrongSort = Resources.Load("SFX/Wrong",AudioClip);
+    
 
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
+        
+        correctSort = Resources.Load<AudioClip>("SFX/Correct");
+        wrongSort = Resources.Load<AudioClip>("SFX/Wrong");
     }
 
     private void Start()
