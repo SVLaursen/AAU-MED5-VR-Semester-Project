@@ -10,7 +10,7 @@ public class TrashObject : MonoBehaviour
     [SerializeField] private TrashType trashType;
     [SerializeField] private int pointsGiven;
     [SerializeField] private int pointsTaken;
-    [SerializeField] private float resetDistance = 5f;
+    [SerializeField] private float resetDistance = 0.1f;
 
     [SerializeField] private AudioClip collisionSound;
 
@@ -98,7 +98,7 @@ public class TrashObject : MonoBehaviour
     {
         var distanceFromOrigin = Vector3.Distance(transform.position, _originalPosition);
 
-        if (distanceFromOrigin < resetDistance)
+        if (distanceFromOrigin > resetDistance)
         {
             yield return new WaitForSeconds(6f);
 
