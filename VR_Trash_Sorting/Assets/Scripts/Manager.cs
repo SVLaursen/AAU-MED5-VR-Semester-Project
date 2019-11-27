@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using TMPro;
 
 public class Manager : MonoBehaviour
 {
@@ -31,6 +31,7 @@ public class Manager : MonoBehaviour
     #endregion
 
     [SerializeField] private Canvas gameOverUI;
+    [SerializeField] private TMP_InputField inputField;
     
     private string _userId;
     private int _score;
@@ -72,6 +73,8 @@ public class Manager : MonoBehaviour
     //Called from UI button press
     public void SaveToFile()
     {
+        _userId = inputField.text;
+        
         var filePath = Application.dataPath + "/user_" + _userId + ".txt";
 
         if (!File.Exists(filePath))
