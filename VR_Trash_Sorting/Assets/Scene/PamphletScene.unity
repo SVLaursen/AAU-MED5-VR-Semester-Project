@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 219669949}
-  m_IndirectSpecularColor: {r: 0.014888457, g: 0.040769458, b: 0.030903555, a: 1}
+  m_IndirectSpecularColor: {r: 0.014849985, g: 0.040771984, b: 0.030901188, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1533,14 +1533,14 @@ MonoBehaviour:
   m_VerticalScrollbar: {fileID: 0}
   m_VerticalScrollbarEventHandler: {fileID: 0}
   m_ScrollSensitivity: 1
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
   m_HideSoftKeyboard: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 2
   m_RegexValue: 
   m_GlobalPointSize: 14
   m_CharacterLimit: 0
@@ -8915,6 +8915,11 @@ PrefabInstance:
       propertyPath: collisionSound
       value: 
       objectReference: {fileID: 8300000, guid: 90c7d7426c7f4d14c8801b5c577139d3, type: 3}
+    - target: {fileID: 9093004890990659708, guid: b0cfebfef75835a4984f7680e2daa65f,
+        type: 3}
+      propertyPath: resetDistance
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0cfebfef75835a4984f7680e2daa65f, type: 3}
 --- !u!1001 &1448445991058784189
@@ -9009,6 +9014,11 @@ PrefabInstance:
       propertyPath: collisionSound
       value: 
       objectReference: {fileID: 8300000, guid: 20dfd642e293aa742b7ec9ce6b01a8eb, type: 3}
+    - target: {fileID: 8468170885279374338, guid: 38b718c09528d4a4e9e943808b581699,
+        type: 3}
+      propertyPath: resetDistance
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38b718c09528d4a4e9e943808b581699, type: 3}
 --- !u!1001 &1984373636342475516
@@ -9088,6 +9098,11 @@ PrefabInstance:
       propertyPath: collisionSound
       value: 
       objectReference: {fileID: 8300000, guid: af7fb08eda3bdcf42b649a86f7de94ae, type: 3}
+    - target: {fileID: 1851823220817372247, guid: 043cb6ab7d43ad44f8ef0eefe4a16d54,
+        type: 3}
+      propertyPath: resetDistance
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043cb6ab7d43ad44f8ef0eefe4a16d54, type: 3}
 --- !u!1001 &2451129745141489737
@@ -9167,6 +9182,11 @@ PrefabInstance:
       propertyPath: collisionSound
       value: 
       objectReference: {fileID: 8300000, guid: 90c7d7426c7f4d14c8801b5c577139d3, type: 3}
+    - target: {fileID: 5777737252257730111, guid: f4fef662bd341124da014becd0de3361,
+        type: 3}
+      propertyPath: resetDistance
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4fef662bd341124da014becd0de3361, type: 3}
 --- !u!1001 &2915678693226941553
@@ -9256,6 +9276,11 @@ PrefabInstance:
       propertyPath: collisionSound
       value: 
       objectReference: {fileID: 8300000, guid: 4ab8495c5afbbdc49b9f5e10e283bfcb, type: 3}
+    - target: {fileID: 5855220146261167351, guid: 8cb08ab4aa0a8d74c98130dad44ed201,
+        type: 3}
+      propertyPath: resetDistance
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cb08ab4aa0a8d74c98130dad44ed201, type: 3}
 --- !u!1001 &3087044704482163795
@@ -9335,6 +9360,11 @@ PrefabInstance:
       propertyPath: collisionSound
       value: 
       objectReference: {fileID: 8300000, guid: 20dfd642e293aa742b7ec9ce6b01a8eb, type: 3}
+    - target: {fileID: 8483226463635308188, guid: e62362ccd94cdf54fac1074405f437fc,
+        type: 3}
+      propertyPath: resetDistance
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e62362ccd94cdf54fac1074405f437fc, type: 3}
 --- !u!1001 &3563093503483973004
@@ -9434,6 +9464,11 @@ PrefabInstance:
       propertyPath: collisionSound
       value: 
       objectReference: {fileID: 8300000, guid: af7fb08eda3bdcf42b649a86f7de94ae, type: 3}
+    - target: {fileID: 3238910924055023996, guid: 73e5969236e435c4f83cd87c22eb411a,
+        type: 3}
+      propertyPath: resetDistance
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73e5969236e435c4f83cd87c22eb411a, type: 3}
 --- !u!1001 &3930758685395782490
@@ -9523,6 +9558,11 @@ PrefabInstance:
       propertyPath: collisionSound
       value: 
       objectReference: {fileID: 8300000, guid: 90c7d7426c7f4d14c8801b5c577139d3, type: 3}
+    - target: {fileID: 5243587051836246494, guid: 979c6cd1c92f9554dbbf5efb9e51d34e,
+        type: 3}
+      propertyPath: resetDistance
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 979c6cd1c92f9554dbbf5efb9e51d34e, type: 3}
 --- !u!1001 &4781091957166923061
@@ -9602,6 +9642,11 @@ PrefabInstance:
       propertyPath: collisionSound
       value: 
       objectReference: {fileID: 8300000, guid: bae70e109ab49c543ad69477206dd055, type: 3}
+    - target: {fileID: 7574932418066920662, guid: 5418fd6b3d819e34ca572294d76f89f4,
+        type: 3}
+      propertyPath: resetDistance
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5418fd6b3d819e34ca572294d76f89f4, type: 3}
 --- !u!1001 &5185016996312045155
@@ -9781,6 +9826,11 @@ PrefabInstance:
       propertyPath: collisionSound
       value: 
       objectReference: {fileID: 8300000, guid: bae70e109ab49c543ad69477206dd055, type: 3}
+    - target: {fileID: 5796037878016931229, guid: bf6f6807de38f6046bb4479645db8385,
+        type: 3}
+      propertyPath: resetDistance
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf6f6807de38f6046bb4479645db8385, type: 3}
 --- !u!4 &5322527214968499008 stripped
@@ -9978,6 +10028,11 @@ PrefabInstance:
       propertyPath: collisionSound
       value: 
       objectReference: {fileID: 8300000, guid: fc6a49475060e24458822c7ea4e8a51e, type: 3}
+    - target: {fileID: 6974829485895154293, guid: 585292aa395f41e45ae0ac2353558784,
+        type: 3}
+      propertyPath: resetDistance
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 585292aa395f41e45ae0ac2353558784, type: 3}
 --- !u!1001 &5621353082361632352
@@ -10067,6 +10122,11 @@ PrefabInstance:
       propertyPath: collisionSound
       value: 
       objectReference: {fileID: 8300000, guid: bae70e109ab49c543ad69477206dd055, type: 3}
+    - target: {fileID: 3803964302501669786, guid: 93e1a6662906c3e4d9d384e24a7601e5,
+        type: 3}
+      propertyPath: resetDistance
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93e1a6662906c3e4d9d384e24a7601e5, type: 3}
 --- !u!1001 &6200521332576172376
@@ -10156,6 +10216,11 @@ PrefabInstance:
       propertyPath: collisionSound
       value: 
       objectReference: {fileID: 8300000, guid: 4ab8495c5afbbdc49b9f5e10e283bfcb, type: 3}
+    - target: {fileID: 5461192994904950230, guid: bbe575e00e387cc46902edf92ff09b61,
+        type: 3}
+      propertyPath: resetDistance
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbe575e00e387cc46902edf92ff09b61, type: 3}
 --- !u!1001 &7036734315735985577
@@ -10250,6 +10315,11 @@ PrefabInstance:
       propertyPath: collisionSound
       value: 
       objectReference: {fileID: 8300000, guid: af7fb08eda3bdcf42b649a86f7de94ae, type: 3}
+    - target: {fileID: 2271068283658742048, guid: 9ed7c64581a452d44bc1a8fcf38f5ca8,
+        type: 3}
+      propertyPath: resetDistance
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ed7c64581a452d44bc1a8fcf38f5ca8, type: 3}
 --- !u!1001 &7434142283972605537
@@ -10339,6 +10409,11 @@ PrefabInstance:
       propertyPath: collisionSound
       value: 
       objectReference: {fileID: 8300000, guid: af7fb08eda3bdcf42b649a86f7de94ae, type: 3}
+    - target: {fileID: 8085546553617205588, guid: 1c99502facc368649a069aa8b9ad98ca,
+        type: 3}
+      propertyPath: resetDistance
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c99502facc368649a069aa8b9ad98ca, type: 3}
 --- !u!1001 &7823393068622638075
@@ -10512,6 +10587,11 @@ PrefabInstance:
       propertyPath: collisionSound
       value: 
       objectReference: {fileID: 8300000, guid: 4ab8495c5afbbdc49b9f5e10e283bfcb, type: 3}
+    - target: {fileID: 6057358405923971624, guid: 344395e5a426c4441a979130cf21ce4a,
+        type: 3}
+      propertyPath: resetDistance
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 344395e5a426c4441a979130cf21ce4a, type: 3}
 --- !u!1001 &8350468388312914048
@@ -10601,6 +10681,11 @@ PrefabInstance:
       propertyPath: collisionSound
       value: 
       objectReference: {fileID: 8300000, guid: af7fb08eda3bdcf42b649a86f7de94ae, type: 3}
+    - target: {fileID: 9133352413903661092, guid: 73de106da622724459c253ef1ccbdb03,
+        type: 3}
+      propertyPath: resetDistance
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73de106da622724459c253ef1ccbdb03, type: 3}
 --- !u!1001 &8953469154126979490
@@ -10685,6 +10770,11 @@ PrefabInstance:
       propertyPath: collisionSound
       value: 
       objectReference: {fileID: 8300000, guid: af7fb08eda3bdcf42b649a86f7de94ae, type: 3}
+    - target: {fileID: 1822165909290857925, guid: dd9611276821b364abe84e327198eebd,
+        type: 3}
+      propertyPath: resetDistance
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd9611276821b364abe84e327198eebd, type: 3}
 --- !u!33 &9046825243389648272
