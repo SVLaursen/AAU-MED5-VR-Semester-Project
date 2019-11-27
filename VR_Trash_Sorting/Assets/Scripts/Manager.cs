@@ -32,7 +32,7 @@ public class Manager : MonoBehaviour
 
     [SerializeField] private Canvas gameOverUI;
     
-    private int _userId;
+    private string _userId;
     private int _score;
     
     private Dictionary<TrashType, int> _failData = new Dictionary<TrashType, int>()
@@ -66,7 +66,7 @@ public class Manager : MonoBehaviour
     public void SetUsername(string arg0)
     {
         Debug.Log("User ID set");
-        _userId = int.Parse(arg0);
+        _userId = arg0;
     }
     
     //Called from UI button press
