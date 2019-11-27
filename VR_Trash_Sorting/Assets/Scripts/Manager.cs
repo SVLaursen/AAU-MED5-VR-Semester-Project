@@ -81,7 +81,7 @@ public class Manager : MonoBehaviour
         
         File.AppendAllText(filePath, content);
         
-        foreach (var data in _failData.Select(entry => entry.Key.ToString() + ": " + entry.Value + "\n"))
+        foreach (var data in _failData.Select(entry => entry.Key.ToString() + ": " + entry.Value.ToString() + "\n"))
             File.AppendAllText(filePath, data);
     }
     #endregion
